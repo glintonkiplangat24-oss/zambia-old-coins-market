@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zambia Old Coins Market</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6f2;
+  color: #24352a;
+}
+
+header {
+  background: #124c2d;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+}
+
+header p {
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #00000012;
+}
+
+h2 {
+  color: #124c2d;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c9d4ca;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button,
+.contact-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 7px;
+  background: #176b3a;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.contact-button:hover {
+  background: #103b26;
+}
+
+.whatsapp {
+  background: #168b48;
+}
+
+.small {
+  color: #626d65;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+footer {
+  background: #103b26;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+#result {
+  margin-top: 20px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 12px;
+    padding: 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🪙 Zambia Old Coins Market</h1>
+  <p>Submit your old Zambian coins for purchase consideration.</p>
+</header>
+
+<main class="container">
+
+  <h2>Seller Registration Form</h2>
+
+  <p>
+    Do you have old Zambian coins to sell? Complete the form below.
+    We will review your information and contact you to discuss a possible purchase.
+  </p>
+
+  <form id="coinForm">
+
+    <label for="name">Seller's Full Name *</label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      required
+      maxlength="100"
+      placeholder="Enter your full name"
+    >
+
+    <label for="country">Country of Residence *</label>
+    <input
+      id="country"
+      name="country"
+      type="text"
+      required
+      maxlength="80"
+      placeholder="e.g. Zambia"
+    >
+
+    <label for="phone">Phone or WhatsApp Number *</label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      required
+      maxlength="30"
+      placeholder="Include your country code"
+    >
+
+    <label for="email">Email Address *</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      required
+      maxlength="150"
+      placeholder="Enter your email address"
+    >
+
+    <label for="denomination">Coin Denomination *</label>
+    <select id="denomination" name="denomination" required>
+      <option value="">Choose denomination</option>
+      <option>1 Ngwee</option>
+      <option>2 Ngwee</option>
+      <option>5 Ngwee</option>
+      <option>10 Ngwee</option>
+      <option>20 Ngwee</option>
+      <option>50 Ngwee</option>
+      <option>1 Kwacha</option>
+      <option>2 Kwacha</option>
+      <option>5 Kwacha</option>
+      <option>Other</option>
+      <option>Unknown</option>
+    </select>
+
+    <label for="year">Year on the Coin *</label>
+    <input
+      id="year"
+      name="year"
+      type="text"
+      required
+      maxlength="30"
+      placeholder="e.g. 1964 or unknown"
+    >
+
+    <label for="quantity">Number of Coins *</label>
+    <input
+      id="quantity"
+      name="quantity"
+      type="number"
+      min="1"
+      max="100000"
+      value="1"
+      required
+    >
+
+    <label for="condition">Condition of the Coin *</label>
+    <select id="condition" name="condition" required>
+      <option value="">Choose condition</option>
+      <option>Excellent</option>
+      <option>Very good</option>
+      <option>Good</option>
+      <option>Worn</option>
+      <option>Damaged</option>
+      <option>Not sure</option>
+    </select>
+
+    <label for="price">Asking Price and Currency *</label>
+    <input
+      id="price"
+      name="price"
+      type="text"
+      required
+      maxlength="80"
+      placeholder="e.g. ZMW 200 or USD 10"
+    >
+
+    <label for="photo">Upload Coin Photograph</label>
+    <input
+      id="photo"
+      name="photo"
+      type="file"
+      accept="image/*"
+      multiple
+    >
+
+    <p class="small">
+      Photos selected here are not automatically uploaded to GitHub.
+      Attach them to your email or WhatsApp message when sending your enquiry.
+    </p>
+
+    <label for="details">Additional Coin Details</label>
+    <textarea
+      id="details"
+      name="details"
+      maxlength="1500"
+      placeholder="Describe the coin or provide other relevant information."
+    ></textarea>
+
+    <button type="submit">Prepare My Submission</button>
+
+  </form>
+
+  <div id="result" aria-live="polite"></div>
+
+  <p class="small">
+    Submitting an enquiry does not guarantee that the coin will be purchased.
+    Please confirm the offer and delivery arrangements before sending any coins.
+  </p>
+
+</main>
+
+<footer>
+  <p><strong>Zambia Old Coins Market</strong></p>
+
+  <p>
+    WhatsApp:
+    <a href="https://wa.me/254727686679">+254727686679</a>
+  </p>
+
+  <p>
+    Email:
+    <a href="mailto:james62@idf.ovh">james62@idf.ovh</a>
+  </p>
+</footer>
+
+<script>
+const form = document.getElementById("coinForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (!form.reportValidity()) return;
+
+  const photoInput = document.getElementById("photo");
+  const photos = Array.from(photoInput.files);
+
+  if (photos.length > 4) {
+    alert("Please select no more than four photos.");
+    return;
+  }
+
+  for (const photo of photos) {
+    if (photo.size > 5 * 1024 * 1024) {
+      alert("Each photo must be 5 MB or smaller.");
+      return;
+    }
+  }
+
+  const d = new FormData(form);
+
+  const message = [
+    "ZAMBIA OLD COINS MARKET - SELLER ENQUIRY",
+    "",
+    "Name: " + d.get("name"),
+    "Country: " + d.get("country"),
+    "Phone: " + d.get("phone"),
+    "Email: " + d.get("email"),
+    "Denomination: " + d.get("denomination"),
+    "Year: " + d.get("year"),
+    "Quantity: " + d.get("quantity"),
+    "Condition: " + d.get("condition"),
+    "Asking price: " + d.get("price"),
+    "Additional details: " + (d.get("details") || "None"),
+    "",
+    "Selected photographs: " + photos.length,
+    photos.length
+      ? "I will attach the selected photos separately."
+      : "No photos selected."
+  ].join("\n");
+
+  const waUrl =
+    "https://wa.me/254727686679?text=" +
+    encodeURIComponent(message);
+
+  const mailUrl =
+    "mailto:james62@idf.ovh?subject=" +
+    encodeURIComponent("Old Zambian Coins - Seller Enquiry") +
+    "&body=" + encodeURIComponent(message);
+
+  result.replaceChildren();
+
+  const heading = document.createElement("h3");
+  heading.textContent = "Your submission is ready";
+  result.appendChild(heading);
+
+  const explanation = document.createElement("p");
+  explanation.textContent =
+    "Choose WhatsApp or email below to send your coin details. " +
+    "Attach any selected photographs before sending.";
+  result.appendChild(explanation);
+
+  const wa = document.createElement("a");
+  wa.href = waUrl;
+  wa.target = "_blank";
+  wa.rel = "noopener";
+  wa.className = "contact-button whatsapp";
+  wa.textContent = "Send Details Through WhatsApp";
+  result.appendChild(wa);
+
+  const mail = document.createElement("a");
+  mail.href = mailUrl;
+  mail.className = "contact-button";
+  mail.textContent = "Send Details Through Email";
+  result.appendChild(mail);
+
+  result.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+});
+</script>
+
+</body>
+  </html>
